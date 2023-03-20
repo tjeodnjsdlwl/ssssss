@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+#u_skip{
+    position: relative;
+    z-index: 3000;
+    a{
+        position: absolute;
+        top: -30px;
+        left: 0;
+        width: 138px;
+        background: #333;
+        text-align: center;
+        &:active{
+            top: 0;
+            text-decoration: none;
+            z-index: 1000
+        }
+        &:focus{
+            top: 0;
+            text-decoration: none;
+            z-index: 1000
+        }
+    }
+    span{
+        display: inline-block;
+        padding: 2px 6px 0 0;
+        font-size: 13px;
+        line-height: 26px;
+        color: #fff;
+        letter-spacing: -1px;
+        white-space: nowrap;
+    }
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(18,18,18,.8);
+    z-index: 10;
+    color: #fff;
+    padding: 5px 0;
+    .logo{
+        a{
+            display: block;
+            width: 95px;
+            height: 50px;
+            background: url(/assets/images/Spotify_Logo.png) center/ 95px auto no-repeat;
+        }
+    }
+
+    &.active{
+        background: rgba(255, 255, 255, 1);
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: $grey2;
+        }
+    }
+
+    .group-menu{
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 310px;
+        height: 100%;
+        padding: 30px 0;
+        z-index: 100;
+        background-color: $black;
+        color: #fff;
+        overflow: scroll;
+        overflow-x: hidden;
+        transition: all .3s ease-out;
+        &.on{
+            visibility: visible;
+            left: 0;
+        }
+        .login-area{
+            padding:30px;
+            .login{
+                position: relative;
+                font-size: 18px;
+                height: 58px;
+                line-height: 58px;
+                display: inline-block;
+                font-weight: 700;
+                &::after{
+                    content: '';
+                    @include position-vertical;
+                    right: -20px;
+                    margin-top: 2px;
+                    width: 6px;
+                    height: 10px;
+                    background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath data-name='사각형 1523' fill='none' stroke='%23707070' stroke-linecap='round' d='M0 0h5v8H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)'%3E%3Cpath data-name='패스 1406' d='m.048.041 4.856 4.066L.303 7.96' fill='none' stroke='%23fff' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
+                }
+            }
+        }
+        .menu-area{
+            .menu-item{
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 53px;
+                a{
+                    display: block;
+                    padding: 0 30px;
+                }
+                &.bk{
+                    background: #000;
+                }
+            }
+        }
+        .btn-area{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5px;
+            padding: 12px 30px 15px;
+            .btn-utill{
+                flex: 1;
+                height: 40px;
+                line-height: 40px;
+                background: #252525;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                svg{
+                    fill: #898989;
+                }
+            }
+        }
+        .utill-area{
+            padding:20px 30px;
+            .utill-item{
+                .nav{
+                    opacity: 0.5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+                    height: 40px;
+                    line-height: 40px;
+                    &.on{
+                        svg{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+            .sub{
+                display: none;
+                .sub-item{
+                    position: relative;
+                    color: $grey2;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    height: 53px;
+                    line-height: 53px;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        top: 60%;
+                        transform: translateY(-60%);
+                        right: -7px;
+                        width: 17px;
+                        height: 17px;
+                        opacity: 0.2;
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 30 30'%3E%3Cpath fill='none' stroke='%23FFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 1h13v13'/%3E%3Cpath fill='none' stroke='%23FFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m3.338 13.369-.676-.738 11-11 .676.738-11 11Z'/%3E%3C/svg%3E%0A")right center no-repeat;
+                    }
+                }
+            }
+        }
+        .btn-close{
+            position: absolute;
+            top: 30px;
+            right: 20px;
+        }
+    }
+}
+
+.gnb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .group-gnb{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .btn-menu{
+            position: relative;
+            width: 20px;
+            height: 20px;
+            display: block;
+            .ico-menu{
+                display: block;
+                position: relative;
+                height: 1px;
+                width: 20px;
+                margin-top: -1px;
+                background-color: #fff;
+            }
+            .ico-menu::before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 7px;
+                left: 0;
+                height: 1px;
+                width: 20px;
+                background-color: #fff;
+            }
+            .ico-menu::after{
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 6px;
+                left: 0;
+                height: 1px;
+                width: 20px;
+                background-color: #fff;
+            }
+        }
+        .btn-serch{
+            display: block;
+        }
+    }
+}
+
+.footer{
+    padding: 40px 0;
+    background-color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .relation-area{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 12px;
+        .rel-link{
+            display: block;
+            padding: 15px 0;
+            color: $grey3;
+        }
+    }
+    .corp-area{
+        .corp-list{
+            display: flex;
+            overflow: hidden;
+            max-width: 250px;
+            margin: 0 auto;
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: 10px;
+            text-align: center;
+        }
+        .corp-item{
+            position: relative;
+            color: $grey2;
+            font-size: 12px;
+            height: 29px;
+            line-height: 29px;
+            &:nth-child(n+1)::before{
+                content: '';
+                display: block;
+                @include position-vertical;
+                margin-top: 2px;
+                right: -6px;
+                width: 1px;
+                height: 10px;
+                background-color: $grey2;
+            }
+            &:nth-child(3)::before{
+                content: none;
+            }
+            &:last-child::before{
+                content: none;
+            }
+        }
+    }
+    .sns-area{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        .sns-link{
+            display: block;
+        }
+    }
+    .copy{
+        padding: 60px 0 30px;
+        color: $grey2;
+        font-size: 11px;
+        text-align: center;
+    }
+}

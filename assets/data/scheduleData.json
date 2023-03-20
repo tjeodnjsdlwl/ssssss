@@ -1,0 +1,79 @@
+{
+    "items":[
+       {
+        "id":"1",
+        "snippet":{
+            "thumbnail":"./assets/images/slide_schedule_01.jpg",
+            "date":"03월 02일",
+            "time":{
+                "starhours":"17",
+                "starMin":"30",
+                "endhours":"21",
+                "endMin":"30"
+            },
+            "title":"CRAVITY",
+            "desc":"Seoul EBS Studio Hall,Seoul"
+        }
+       },
+       {
+        "id":"1",
+        "snippet":{
+            "thumbnail":"./assets/images/slide_schedule_02.jpg",
+            "date":"03월 09일",
+            "time":{
+                "starhours":"19",
+                "starMin":"00",
+                "endhours":"21",
+                "endMin":"20"
+            },
+            "title":"Seoul Jazz Festival 2023",
+            "desc":"Olympic Park,Seoul"
+        }
+       },
+       {
+        "id":"1",
+        "snippet":{
+            "thumbnail":"./assets/images/slide_schedule_03.jpg",
+            "date":"03월 11일",
+            "time":{
+                "starhours":"18",
+                "starMin":"00",
+                "endhours":"21",
+                "endMin":"20"
+            },
+            "title":"oceanfromtheblue",
+            "desc":"EBS Space Hall,Goyang-si"
+        }
+       },
+       {
+        "id":"1",
+        "snippet":{
+            "thumbnail":"./assets/images/slide_schedule_04.jpg",
+            "date":"03월 13일",
+            "time":{
+                "starhours":"20",
+                "starMin":"00",
+                "endhours":"21",
+                "endMin":"20"
+            },
+            "title":"SUGA, Agust D",
+            "desc":"Jamsil Indoor Stadium,Seoul"
+        }
+       },
+       {
+        "id":"1",
+        "snippet":{
+            "thumbnail":"./assets/images/slide_schedule_05.jpg",
+            "date":"03월 24일",
+            "time":{
+                "starhours":"19",
+                "starMin":"30",
+                "endhours":"21",
+                "endMin":"20"
+            },
+            "title":"DayNight",
+            "desc":"Seoul EBS Studio Hall,Seoul"
+        }
+       }
+    ]
+}
